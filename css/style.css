@@ -66,3 +66,13 @@ background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, F
         font-size: 140% !important;
     }
   }
+
+  .opensea-link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-size: 125%;
+      margin-top: 12px;
+  }
