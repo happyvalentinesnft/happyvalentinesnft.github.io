@@ -56,3 +56,6 @@ background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, F
     font-size: 32px;
     font-weight: 700;
 }
+.text-uppercase {
+    text-transform: uppercase !important;
+}
