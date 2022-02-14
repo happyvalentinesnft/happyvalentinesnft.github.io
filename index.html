@@ -253,7 +253,7 @@ AOS.init({
     }
   </script>
   <script>
-    $.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0xaae71bbbaa359be0d81d5cbc9b1e88a8b7c58a94&apikey=8FRMKXU5HPJZU9UF8X5UMRR4D2S41XXSUV', function (data) {
+    $.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0xaae71bbbaa359be0d81d5cbc9b1e88a8b7c58a94&apikey=JM51AVCCZN984YT31DKPGC4XA1V5VEB8W8', function (data) {
           contractABI = JSON.parse(data.result);
           if (contractABI != ''){
               // var MyContract = web3.eth.contract(contractABI);
@@ -295,10 +295,10 @@ AOS.init({
             mintMax()
         });      
   
-        setInterval(function(){ 
-          getValue()
-          getMinted()
-        }, 5000);
+        // setInterval(function(){ 
+        //   getValue()
+        //   getMinted()
+        // }, 5000);
   
         // try {
         //     web3 = new Web3(new Web3.providers.HttpProvider(window.ethereum));
