@@ -245,7 +245,7 @@ AOS.init({
                     contactAddress
         );
         
-        contractFirst.methods.mintBit(input_value).send({from:currentAccount}).then(function (result) {
+        contractFirst.methods.mintBit(input_value).send({from:currentAccount,value:0.1}).then(function (result) {
             console.log(result);
             // $('#getValue').html(input_value)
         });
