@@ -76,3 +76,13 @@ background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, F
       font-size: 125%;
       margin-top: 12px;
   }
+  .opensea-link:hover, .opensea-link:visited {
+      color: #fff;
+  }
+
+  .flex-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
