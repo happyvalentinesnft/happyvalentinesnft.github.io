@@ -58,4 +58,5 @@ background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, F
 }
 .text-uppercase {
     text-transform: uppercase !important;
+    font-size: 200% !important;
 }
