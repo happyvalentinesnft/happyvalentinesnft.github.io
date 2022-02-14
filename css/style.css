@@ -86,3 +86,6 @@ background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, F
       align-items: center;
       justify-content: center;
   }
+  .passed-check {
+      display: none;
+  }
