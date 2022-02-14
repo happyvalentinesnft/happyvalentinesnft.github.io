@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'groboldregular';
+    src: url('grobold-webfont.woff2') format('woff2'),
+         url('grobold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+
+}
+html, body {
+    background: #b72128;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b72128, #f2575e, #b72128);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b72128, #f2575e, #b72128); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+.logo-header {
+    width: fit-content;
+    margin: 0 auto;
+}
+.grobold {
+    font-family: groboldregular, Helvetica, sans-serif;
+}
+.center-item {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+.btn-mint {
+    color: #fff;
+    font-weight: 700;
+    background: #11998e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.flex-center-vert {
+    display: flex;
+    justify-content: center;
+}
+.big-btn {
+    width: 250px !important;
+    font-size: 200%;
+}
+.btn:hover {
+    color: #e9fff7;
+}
+.p-font {
+    font-family: 'Amatic SC', cursive;
+    font-size: 32px;
+    font-weight: 700;
+}
