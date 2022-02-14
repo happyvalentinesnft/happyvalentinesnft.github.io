@@ -24,8 +24,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <!-- <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script> -->
   
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
@@ -68,7 +68,28 @@
 
     <p class="p-font mt-5 collection-inner center-item" data-aos="zoom-in-up">COLLECT YOUR FREE PASS BELOW</p>
     
-    <div class="mt-2 flex-center-vert" data-aos="zoom-in-up"><button id="mintMax" type="button" class="btn btn-mint big-btn grobold">MINT PASS</button></div>
+    <div class="mt-2 flex-center-vert" data-aos="zoom-in-up"><button id="mintMax" type="button" class="btn btn-mint big-btn grobold">MINT PASS</button>
+    
+
+
+  <!-- Minting button provided by Rampp.xyz -->
+  <div class='rampp-minting-container'>
+    <button
+      class='rampp-minting-button' 
+      style='display:none'
+      data-styles='eyJvcGVuIjp7InRleHQiOiJNSU5UIFBBU1MiLCJzdHlsZXMiOiJib3JkZXI6bm9uZTt3aWR0aDogMTVyZW07cGFkZGluZzowLjVyZW07Zm9udC1zaXplOiAxLjEyNXJlbTtsaW5lLWhlaWdodDogMS43NXJlbTt0ZXh0LWFsaWduOiBjZW50ZXI7Y3Vyc29yOiBwb2ludGVyO2JvcmRlci1yYWRpdXM6MC4xMjVyZW07Y29sb3I6I0ZGRkZGRjtiYWNrZ3JvdW5kLWNvbG9yOiMxMTk5OGU7In0sInBhdXNlZCI6eyJ0ZXh0IjoiTUlOVCBQQVVTRUQiLCJzdHlsZXMiOiJib3JkZXI6bm9uZTt3aWR0aDogMTVyZW07cGFkZGluZzowLjVyZW07Zm9udC1zaXplOiAxLjEyNXJlbTtsaW5lLWhlaWdodDogMS43NXJlbTt0ZXh0LWFsaWduOiBjZW50ZXI7Y3Vyc29yOiBwb2ludGVyO2JvcmRlci1yYWRpdXM6MC4xMjVyZW07Y29sb3I6IzY3NjU2NTtiYWNrZ3JvdW5kLWNvbG9yOiNDQ0RCREM7Y3Vyc29yOm5vdC1hbGxvd2VkOyJ9LCJzdXBwbHlSZWFjaGVkIjp7InRleHQiOiJTT0xEIE9VVCIsInN0eWxlcyI6ImJvcmRlcjpub25lO3dpZHRoOiAxNXJlbTtwYWRkaW5nOjAuNXJlbTtmb250LXNpemU6IDEuMTI1cmVtO2xpbmUtaGVpZ2h0OiAxLjc1cmVtO3RleHQtYWxpZ246IGNlbnRlcjtjdXJzb3I6IHBvaW50ZXI7Ym9yZGVyLXJhZGl1czowLjEyNXJlbTtjb2xvcjojZmYwMDAwO2JhY2tncm91bmQtY29sb3I6I2ZmYjhiODtjdXJzb3I6bm90LWFsbG93ZWQ7In0sImVycm9yIjp7InRleHQiOiJNaW50aW5nIFVuYXZhaWxhYmxlIiwic3R5bGVzIjoiYm9yZGVyOm5vbmU7d2lkdGg6IDE1cmVtO3BhZGRpbmc6MC41cmVtO2ZvbnQtc2l6ZTogMS4xMjVyZW07bGluZS1oZWlnaHQ6IDEuNzVyZW07dGV4dC1hbGlnbjogY2VudGVyO2N1cnNvcjogcG9pbnRlcjtib3JkZXItcmFkaXVzOjAuMTI1cmVtO2NvbG9yOiNmZjAwMDA7YmFja2dyb3VuZC1jb2xvcjojZmZiOGI4O2N1cnNvcjpub3QtYWxsb3dlZDsifSwiY2xhaW1UZXh0Ijp7InRleHQiOm51bGwsInN0eWxlcyI6ImNvbG9yOiByZ2JhKDE1NiwgMTYzLCAxNzUpO2ZvbnQtc2l6ZTogMC43NXJlbTtsaW5lLWhlaWdodDogMXJlbTt0ZXh0LWFsaWduOiBjZW50ZXI7cGFkZGluZy10b3A6IDAuMjVyZW07cGFkZGluZy1ib3R0b206IDAuMjVyZW07bWFyZ2luOjA7Zm9udC1mYW1pbHk6c2Fucy1zZXJpZjsifSwicXVhbnRpdHkiOnsidGV4dCI6bnVsbCwic3R5bGVzIjoid2lkdGg6NDBweDtjb2xvcjojMTE5OThlO2JvcmRlci1zdHlsZTpzb2xpZDtib3JkZXItd2lkdGg6MXB4O2JvcmRlci1jb2xvcjojMTE5OThlO2JvcmRlci1yYWRpdXM6MC4xMjVyZW07Zm9udC1zaXplOjEuM3JlbTt0ZXh0LWFsaWduOmNlbnRlcjsifX0='
+      data-abi-link="https://firebasestorage.googleapis.com/v0/b/nft-rampp.appspot.com/o/solidity_outputs%2FhE8AZL6ChZVuD9bi84sw%2FValentinePassContract_data-ed6de9dd-262b-47ce-9ed2-69fe46bd4286.json?alt=media"
+      data-redirect="null"
+      data-contract-address="0xd43E1f7bDd986AA070cCace8942Bd8b526999FA3"
+      data-show-claim-count="false"
+      data-network="testnet"
+      data-format="single"></button>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script type='text/javascript' src="https://rampp.xyz/embeds/embed.js"></script>
+    <!-- End Rampp.xyz minting button-->
+    
+    </div>
 
     <h1 class="grobold center-item mt-5 pt-5" data-aos="fade-up">ABOUT</h1>
     <p class="p-font center-item text-uppercase mt-3" data-aos="zoom-in" data-aos-delay="300">Congrats on finding our top secret website! <br> Mint your free pass above. <br>Something special is coming. <br> Stay tuned.</p>
@@ -105,221 +126,6 @@ AOS.init({
 });
 </script>
 
-<script>
-    let currentAccount = null;
-    let web3js;
-    var contractABI;
-    let contactAddress = '0xaae71bbbaa359be0d81d5cbc9b1e88a8b7c58a94'
-    // web3 lib instance
-    var web3 = new Web3(window.ethereum);
-    var input_value;   
-  
-    function handleAccountsChanged(accounts) {
-        console.log('Calling HandleChanged')
-  
-        if (accounts.length === 0) {
-            console.log('Please connect to MetaMask.');
-            $('#enableMetamask').html('Connect with Metamask')
-        } else if (accounts[0] !== currentAccount) {
-            currentAccount = accounts[0];
-            $('#enableMetamask').html(currentAccount)
-            $('#status').html('')          
-            setTimeout(getMinted(), 1000);
-            if(currentAccount != null) {
-                // Set the button label
-                $('#enableMetamask').html(currentAccount)
-            }
-        }
-        console.log('WalletAddress in HandleAccountChanged ='+currentAccount)
-    }
-  
-    function connect() {
-        console.log('Calling connect()')
-        ethereum
-        .request({ method: 'eth_requestAccounts' })
-        .then(handleAccountsChanged)
-        .catch((err) => {
-        if (err.code === 4001) {
-            // EIP-1193 userRejectedRequest error
-            // If this happens, the user rejected the connection request.
-            console.log('Please connect to MetaMask.');
-            $('#status').html('You refused to connect Metamask')
-  
-        } else {
-            console.error(err);
-        }
-        });
-    }
-  
-    function detectMetaMask() {
-        if (typeof window.ethereum !== 'undefined') {
-            return true
-        } else {
-            return false
-        }
-    }
-  
-    async function getValue() {
-        console.log('GetValue')
-        const contractFirst = new web3.eth.Contract(
-                    contractABI,
-                    contactAddress
-        );
-  
-        console.log(contractFirst.methods)
-        contractFirst.methods.saleIsActive().call().then(function (result) {                
-            console.log(result)
-            if (result==true) {
-              console.log("was true");
-            } else {
-              console.log("was false");
-            }
-        });
-    }
-  
-    async function getMinted() {
-        console.log('GetValue')
-        const contractFirst = new web3.eth.Contract(
-                    contractABI,
-                    contactAddress
-        );
-  
-        contractFirst.methods.totalSupply().call().then(function (result) {                
-            $(".mintedAmount").html(result)
-        });
-    }
-  
-    async function setValue() {
-        console.log('Set Value')
-  
-        input_value = $('#value').val()
-  
-        let sendValue=0;
-        if (input_value == '1') {
-          sendValue=88880000000000000;
-        } else if (input_value == '2') {
-          sendValue=177760000000000000;
-        } else if (input_value == '3') {
-          sendValue=266640000000000000;
-        } else if (input_value == '4') {
-          sendValue=355520000000000000;
-        } else if (input_value == '5') {
-          sendValue=444400000000000000;
-        } else if (input_value == '6') {
-          sendValue=533280000000000000;
-        } else if (input_value == '7') {
-          sendValue=622160000000000000;
-        } else if (input_value == '8') {
-          sendValue=711040000000000000;
-        }
-  
-        if(input_value.trim() == '') {
-            input_value = 0
-        }
-        if(!isNaN(input_value)) {
-            input_value = parseInt(input_value)
-        }
-  
-        console.log(contractABI);
-        console.log(contactAddress)
-  
-        const contractFirst = new web3.eth.Contract(
-                    contractABI,
-                    contactAddress
-        );
-        
-        contractFirst.methods.mintBit(input_value).send({from:currentAccount,value:sendValue}).then(function (result) {
-            console.log(result);
-            // $('#getValue').html(input_value)
-        });
-  
-    }
-  
-  
-    async function mintMax() {
-  
-        input_value = 1;
-        
-        const contractFirst = new web3.eth.Contract(
-                    contractABI,
-                    contactAddress
-        );
-        
-        contractFirst.methods.mintBit(input_value).send({from:currentAccount,value:0.1}).then(function (result) {
-            console.log(result);
-            // $('#getValue').html(input_value)
-        });
-  
-    }
-  </script>
-  <script>
-    $.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0xaae71bbbaa359be0d81d5cbc9b1e88a8b7c58a94&apikey=JM51AVCCZN984YT31DKPGC4XA1V5VEB8W8', function (data) {
-          contractABI = JSON.parse(data.result);
-          if (contractABI != ''){
-              // var MyContract = web3.eth.contract(contractABI);
-              // var myContractInstance = MyContract.at("0x87ed28e903cad56eb86449fa1df3f462e12d73a5");
-              // var result = myContractInstance.memberId("0xfe8ad7dd2f564a877cc23feea6c0a9cc2e783715");
-              // console.log("result1 : " + result);            
-              // var result = myContractInstance.members(1);
-              // console.log("result2 : " + result);
-              console.log(contractABI);
-              //Fetch Value from Smart Contract
-              getValue()
-          } else {
-              console.log("Error" );
-          }
-      });
-  
-    $( document ).ready(function() {
-        m = detectMetaMask()
-        if(m) {
-            $('#metaicon').removeClass('meta-gray')
-            $('#metaicon').addClass('meta-normal')
-            $('#enableMetamask').attr('disabled',false)
-            connect() // Make sure the connected wallet is being returned          
-        } else {
-            $('#enableMetamask').attr('disabled',true)
-            $('#metaicon').removeClass('meta-normal')
-            $('#metaicon').addClass('meta-gray')
-        }
-  
-        $('#enableMetamask').click(function() {
-            connect()
-        });
-  
-        $('#setValue').click(function() {
-            setValue()
-        });
-  
-        $('#mintMax').click(function() {
-            mintMax()
-        });      
-  
-        // setInterval(function(){ 
-        //   getValue()
-        //   getMinted()
-        // }, 5000);
-  
-        // try {
-        //     web3 = new Web3(new Web3.providers.HttpProvider(window.ethereum));
-        // } catch (error) {
-        //     console.log(error);
-        //     alert(error)
-        // }
-  
-        $("input[type='text'][name='quantity']").change(function() {
-            if ($(this).val() > 9) {
-                alert("Value must not be greater 8");
-                $(this).val('');
-                $(this).focus();
-            }        
-        });    
-  
-    })
-  
-    
-    
-  </script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
