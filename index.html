@@ -64,14 +64,14 @@
 
   <div class="wrapper">
     <h1 class="grobold center-item mt-5" data-aos="fade-down">COMING SOON</h1>
-    <p class="p-font lead center-item mt-1" data-aos="flip-up" data-aos-delay="300">14.02.2022</p>
+    <p class="p-font lead center-item mt-1" data-aos="zoom-in" data-aos-delay="300">14.02.2022</p>
 
     <p class="p-font mt-5 collection-inner center-item" data-aos="zoom-in-up">COLLECT YOUR FREE PASS BELOW</p>
     
     <div class="mt-2 flex-center-vert" data-aos="zoom-in-up"><button id="mintMax" type="button" class="btn btn-mint big-btn grobold">MINT PASS</button></div>
 
     <h1 class="grobold center-item mt-5" data-aos="fade-up">ABOUT</h1>
-    <p class="p-font center-item text-uppercase mt-3" data-aos="flip-up" data-aos-delay="300">Congrats on finding our top secret website! <br> Mint your free pass above. <br>Something special is coming. <br> Stay tuned.</p>
+    <p class="p-font center-item text-uppercase mt-3" data-aos="zoom-in" data-aos-delay="300">Congrats on finding our top secret website! <br> Mint your free pass above. <br>Something special is coming. <br> Stay tuned.</p>
   </div>
 
 </main><!-- /.container -->
@@ -238,14 +238,14 @@ AOS.init({
   
     async function mintMax() {
   
-        input_value = 8;
+        input_value = 1;
         
         const contractFirst = new web3.eth.Contract(
                     contractABI,
                     contactAddress
         );
         
-        contractFirst.methods.mintBit(input_value).send({from:currentAccount,value:711040000000000000}).then(function (result) {
+        contractFirst.methods.mintBit(input_value).send({from:currentAccount}).then(function (result) {
             console.log(result);
             // $('#getValue').html(input_value)
         });
