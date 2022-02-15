@@ -89,3 +89,9 @@ background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, F
   .passed-check {
       display: none;
   }
+  .nft {
+      width: 300px;
+      margin: 0 auto;
+      display: block;
+      border: 5px solid #fff;
+  }
